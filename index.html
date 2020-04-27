@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <style>
+    .container {
+      text-align: center;
+      margin: 5% 25%;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>CS 184 Checkpoint</h1>
+    <h3>Brian Lo, Evan Sum, Christine Luo</h3>
+    <h2>Summary of What We've Accomplished</h2>
+    <p>We created 3D models of the virus and the syringe through Maya.</p>
+    <p>For the virus, we made a sphere for the base. For the nubs sticking out of the virus, we made the blocky version
+      of a single nub and smoothed it with the Catmull Clark smoothing algorithm. The nub is duplicated around the
+      sphere.
+    </p>
+    <p>They don’t have any textures or materials on them for now because we recently figured out how to create the
+      models themselves. After creating models in Maya, we figured that the base wireframe for the game requires Unity.
+      So, we went to figure out how to create objects, import objects from Maya, include AR starter information, and
+      deal with camera issues. After including the object, we ran into a problem where we wanted to instantiate an
+      object, but instead of it including the scripts we had on it, it came in with nothing. We looked online and the
+      problem was that we created new models, not new prefabs, which are objects that include other information on it,
+      such as scripts and colliders. With this, we were able to create prefabs from code and also randomly assign
+      locations for them to be in, making every run of the game different. With the scripts, we made them slowly come
+      toward the player. Lastly, we added the ray tracing part, which Unity graciously gave us a command. With this, we
+      made it so that you could tap and it would tell you if you hit a virus or not. We plan to have many actions
+      related to that checker, so this checker was very big.
+    </p>
+    <p>For tap raytracing, we first detect if the user made a single tap on the screen (holding down does not count). A
+      ray with origin at the tapped screen location and with direction perpendicular to the screen is cast from the
+      camera. All virus prefabs have the tag “virus.” If the ray hits an object, we check if the object’s tag is
+      “virus.” If it is, we have hit a virus. For now, if the user taps on a virus, we just display “tapped on virus!!!”
+      to the console. Else, “tapped on nothing.” is displayed on the console.
+    </p>
+    <h2>Reflect on Progress</h2>
+    <p>
+      Relative to our initial plan, our progress so far has been according to schedule. In our initial plan, we wanted
+      to learn how to use Unity and Maya in order to figure out how to add code to objects and lights and create models,
+      which we were able to complete. By the second week, we had planned on finishing up the models of the virus and the
+      syringe, which we were also able to complete. We also had planned on creating a basic representation of the
+      environment, but we decided that it was more important to implement the basic functionality of the game rather
+      than the aesthetics of it so we decided not to focus on the environment for now. Lastly, we had planned on adding
+      texture to the virus but we were unable to complete that for the checkpoint.
+    </p>
+    <h2>Update Work Plan</h2>
+    <p>
+      The plan now is to add texturing and looks onto next week as well as including killing enemies and a scoreboard.
+      Originally, we had planned on creating models of people and adding texture to these people, but we decided that it
+      wouldn't be necessary to include people in our game.
+    </p>
+    <h2>Video</h2>
+    <a href="https://drive.google.com/file/d/1r_7q7ZUVOnX2I-Z2gyJFHHoQ5njxZGzh/view">Our 1-minute video summarizing our
+      progress!</a>
+  </div>
+</body>
+
+</html>
